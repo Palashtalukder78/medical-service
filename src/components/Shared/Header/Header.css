@@ -1,0 +1,12 @@
+.navigation{
+    background-color: rgb(255, 255, 255);
+}
+.menu{
+    color: rgb(26, 54, 77);
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 18px;
+}
+.menu:hover{
+    color: blue;
+}

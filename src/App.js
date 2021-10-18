@@ -9,6 +9,7 @@ import ServiceDetails from './components/Home/serviceDetails/ServiceDetails';
 import MakeAppoinment from './components/MakeAppoinment/MakeAppoinment';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import PendingAppoinment from './components/PendingAppoinment/PendingAppoinment';
+import Footer from './components/Shared/Footer/Footer';
 function App() {
   return (
     <AuthProvider>
@@ -37,6 +38,7 @@ function App() {
             <PendingAppoinment></PendingAppoinment>
           </PrivateRoute>
         </Switch>
+        <Footer />
       </Router>
     </AuthProvider>
   );

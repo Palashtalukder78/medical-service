@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home/Home';
 import Header from './components/Shared/Header/Header'
 import Contact from './components/Contact/Contact';
+import AuthProvider from './contexts/AuthProvider';
 function App() {
   return (
-    <div>
+    <AuthProvider>
       <Router>
         <Header />
         <Switch>
@@ -20,7 +21,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </AuthProvider>
   );
 }
 

@@ -1,0 +1,17 @@
+.single-service{
+    border: none !important;
+    padding: 15px;
+    background-color: rgb(233, 241, 241) !important;
+    border-radius: 35px !important;
+    margin: 15px 0;
+    transition: 0.6s;
+}
+.single-service img{
+    border-radius: 35px;
+}
+.single-service button{
+    padding: 5px 15px;
+}
+.single-service:hover{
+    transform: translateY(-10px);
+}

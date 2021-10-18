@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "title": "Routine Medical Care",
+        "shortDescription": "Routine care is the regular care you get from your PCP. Routine care is also care you get from other doctors that your PCP sends you to.",
+        "longDescription": "Routine care is the regular care you get from your PCP. Routine care is also care you get from other doctors that your PCP sends you to. Routine care can be check ups, physicals, health screenings and care for health problems like diabetes, hypertension and asthma.",
+        "photo": "https://i.ibb.co/F6v9B5M/Routine-Medical-Care.jpg"
+    },
+    {
+        "id": "2",
+        "title": "MRI Diognostic",
+        "shortDescription": "Magnetic resonance imaging is a medical imaging technique used in radiology to form pictures of the anatomy and the physiological processes of the body.",
+        "longDescription": "Magnetic resonance imaging is a medical imaging technique used in radiology to form pictures of the anatomy and the physiological processes of the body. MRI scanners use strong magnetic fields, magnetic field gradients, and radio waves to generate images of the organs in the body.",
+        "photo": "https://i.ibb.co/3sMZxt3/mri-diaognostic.jpg"
+    },
+    {
+        "id": "3",
+        "title": "ECG",
+        "shortDescription": "An electrocardiogram (ECG) is a simple test that can be used to check your heart's rhythm and electrical activity. Sensors attached to the skin are used.",
+        "longDescription": "Electrocardiography is the process of producing an electrocardiogram. It is a graph of voltage versus time of the electrical activity of the heart using electrodes placed on the skin.Sensors attached to the skin are used to detect the electrical signals produced by your heart each time it beats.",
+        "photo": "https://i.ibb.co/z65DWwr/ECG.jpg"
+    },
+    {
+        "id": "4",
+        "title": "Full blood Picture",
+        "shortDescription": "A complete blood count, also known as a full blood count, is a set of medical laboratory tests that provide information about the cells in a person's blood.",
+        "longDescription": "A complete blood count, also known as a full blood count, is a set of medical laboratory tests that provide information about the cells in a person's blood. The CBC indicates the counts of white blood cells, red blood cells and platelets, the concentration of hemoglobin, and the hematocrit. The complete blood count (CBC) is a group of tests that evaluate the cells that circulate in blood, including red blood cells (RBCs),",
+        "photo": "https://i.ibb.co/WcVWpRM/full-blood-picture.jpg"
+    },
+    {
+        "id": "5",
+        "title": "X-ray",
+        "shortDescription": "X-ray is a quick, painless test that produces images of the structures inside your body — particularly your bones. X-ray beams pass through your body, and they are absorbed in different amounts depending on the density",
+        "longDescription": "An X-ray, or, much less commonly, X-radiation, is a penetrating form of high-energy electromagnetic radiation. Most X-rays have a wavelength ranging from 10 picometers to 10 nanometers, corresponding to frequencies in the range 30 petahertz to 30 exahertz and energies in the range 124 eV to 124 keV.they are absorbed in different amounts depending on the density ",
+        "photo": "https://i.ibb.co/xFQkRvn/X-ray-ECG-2.jpg"
+    },
+    {
+        "id": "6",
+        "title": "Ambulance Service",
+        "shortDescription": "The ambulance service is the emergency response wing of the National Health Service (NHS). ",
+        "longDescription": "The ambulance service is the emergency response wing of the National Health Service (NHS). The ambulance service has two main functions: an accident and emergency paramedical function, and the Patient Transport Service function which transfers immobile patients to and from their hospital appointments.Emergency medical services, also known as ambulance services or paramedic services, are emergency services that provide urgent pre-hospital treatment and stabilisation for serious illness and injuries and transport to definitive care.",
+        "photo": "https://i.ibb.co/BnvBJt1/ambulance.jpg"
+    }
+]

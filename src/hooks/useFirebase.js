@@ -5,6 +5,7 @@ initializeAuthenTication();
 const useFirebase = () => {
     const auth = getAuth();
     const [user, setUser] = useState('');
+    const [isLoading, setIsLoading] = useState(true)
     const signUpUser = () => {
         return createUserWithEmailAndPassword();
     }
@@ -23,8 +24,9 @@ const useFirebase = () => {
                 setUser(user)
                 console.log(user)
             } else {
-
+                setUser({})
             }
+            setIsLoading(false)
         });
     }, []);
 
@@ -38,6 +40,7 @@ const useFirebase = () => {
         setUserName,
         signIn,
         googleSignIn,
+        isLoading, setIsLoading,
         logOut
     }
 };

@@ -10,16 +10,16 @@ const Header = () => {
     const auth = getAuth();
     const history = useHistory();
     const { allFirebase } = useAuth();
-    const { user, setUser } = allFirebase;
+    const { user, setUser, setIsLoading } = allFirebase;
 
     const handleLogout = () => {
+        setIsLoading(true);
         signOut(auth).then(() => {
             setUser('');
             swal("Good job!", "Logout Successfully", "success");
             history.push('/home');
-        }).catch((error) => {
-            // An error happened.
-        });
+        })
+            .finally(() => setIsLoading(false))
 
     }
     return (

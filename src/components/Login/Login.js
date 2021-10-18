@@ -9,7 +9,7 @@ import { useHistory, useLocation } from 'react-router';
 const Login = () => {
     const auth = getAuth();
     const { allFirebase } = useAuth();
-    const { setUser } = allFirebase;
+    const { setUser, setIsLoading } = allFirebase;
     const history = useHistory();
     const location = useLocation();
     const [toggle, setoggle] = useState(false);
@@ -50,27 +50,29 @@ const Login = () => {
             handleProccedUser(email, password)
     }
     const handleCreateUser = (email, password) => {
+        setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 updateUserName();
                 swal("Good job!", "Account has been created!", "success");
+                history.push(redirect_uri);
             })
-            .catch((error) => {
-                console.log(error.message);
-            });
+            .catch(
+                console.log("Kono Problem hosse")
+            )
+            .finally(() => setIsLoading(false))
     }
     const redirect_uri = location.state?.from || './home';
 
     const handleProccedUser = (email, password) => {
+        setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 console.log(userCredential.user);
                 history.push(redirect_uri);
                 swal("Good job!", "Login Successfully!", "success");
             })
-            .catch((error) => {
-                console.log(error.message);
-            });
+            .finally(() => setIsLoading(false));
     }
     const updateUserName = () => {
         updateProfile(auth.currentUser, {
@@ -81,17 +83,16 @@ const Login = () => {
             console.log("Kono Genjam Ase")
         });
     }
-    const googleProvider = new GoogleAuthProvider();
     const handleSignIn = () => {
+        setIsLoading(true);
+        const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 setUser(result.user);
                 history.push(redirect_uri);
                 swal("Good job!", "Login Successfully!", "success");
             })
-            .catch((error) => {
-                console.log("Kono Genjam Ase")
-            });
+            .finally(() => setIsLoading(false))
     }
     return (
         <div className="login">

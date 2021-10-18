@@ -4,6 +4,7 @@ import Home from './components/Home/Home/Home';
 import Header from './components/Shared/Header/Header'
 import Contact from './components/Contact/Contact';
 import AuthProvider from './contexts/AuthProvider';
+import Login from './components/Login/Login';
 function App() {
   return (
     <AuthProvider>
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact></Contact>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
           </Route>
         </Switch>
       </Router>

@@ -1,0 +1,25 @@
+.login{
+    background-image: url('../../images/banner/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+.login input{
+    width: 100%;
+    border: none;
+    margin: 5px 0;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background-color: rgba(247, 246, 248, 0.74);
+}
+.form{
+    background-color: rgba(77, 221, 33, 0.699);
+    padding: 25PX;
+    border-radius: 25PX;
+}
+.form-container{
+    display: flex;
+    height: 500px;
+    align-items: center;
+}

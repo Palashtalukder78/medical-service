@@ -3,7 +3,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 500px;
 }
 .login input{
     width: 100%;
@@ -20,6 +19,18 @@
 }
 .form-container{
     display: flex;
-    height: 500px;
     align-items: center;
+}
+.signingoogle{
+    background-color: blanchedalmond;
+    font-size: 35px;
+    padding: 9px;
+    border-radius: 50%;
+    color: darkblue;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.signingoogle:hover{
+    color: blanchedalmond;
+    background-color: darkblue;
 }

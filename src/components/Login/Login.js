@@ -126,7 +126,7 @@ const Login = () => {
                                 </form>
                                 <hr />
                                 <div className="text-center">
-                                    <h5>Or</h5>
+                                    <h5>Or login with:</h5>
                                     <i onClick={handleSignIn} className=" fab fa-google signingoogle" ></i>
                                 </div>
                             </div>

@@ -28,7 +28,7 @@ const Header = () => {
                                 fontWeight: "bold",
                                 color: "blue"
                             }}>
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn-sm my-btn">Login</button>
                             </NavLink>
                         </Stack>
                     </Nav>

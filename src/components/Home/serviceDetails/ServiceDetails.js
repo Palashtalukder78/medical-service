@@ -6,9 +6,10 @@ import './ServiceDetails.css';
 
 const ServiceDetails = () => {
     const { id } = useParams();
-    const { allService } = useAuth();
+    const { allService, allAppoinment } = useAuth();
     const { services } = allService;
     const service = services?.find(service => service?.id === id);
+    const { appoinment } = allAppoinment;
     return (
         <div className="details">
             <div className="container">
@@ -19,13 +20,20 @@ const ServiceDetails = () => {
                     <div className="col-md-6">
                         <h2>{service?.title}</h2>
                         <p>{service?.longDescription}</p>
-                        <NavLink to="/make-appoinment">
-                            <button className="my-btn">Make an Appoinment</button>
-                        </NavLink>
+
+                        {!appoinment?.date ?
+                            <NavLink NavLink to="/make-appoinment">
+                                <button className="my-btn">Make an Appoinment</button>
+                            </NavLink>
+                            :
+                            <NavLink to="/pending-appoinment">
+                                <button className="my-btn">View your Appoinment</button>
+                            </NavLink>
+                        }
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

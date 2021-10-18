@@ -9,8 +9,9 @@ import swal from 'sweetalert';
 const Header = () => {
     const auth = getAuth();
     const history = useHistory();
-    const { allFirebase } = useAuth();
+    const { allFirebase, allAppoinment } = useAuth();
     const { user, setUser, setIsLoading } = allFirebase;
+    const { appoinment } = allAppoinment;
 
     const handleLogout = () => {
         setIsLoading(true);
@@ -39,12 +40,21 @@ const Header = () => {
                                 color: "blue"
                             }}>Home</NavLink>
 
-                            <NavLink className="menu" to="/make-appoinment" activeStyle={{
-                                fontWeight: "bold",
-                                color: "blue"
-                            }}>
-                                Make Appoinment
-                            </NavLink>
+                            {!appoinment?.date ?
+                                <NavLink className="menu" to="/make-appoinment" activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "blue"
+                                }}>
+                                    Make Appoinment
+                                </NavLink>
+                                :
+                                <NavLink className="menu" to="/pending-appoinment" activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "blue"
+                                }}>
+                                    View Appoinment
+                                </NavLink>
+                            }
                             <NavLink className="menu" to="/contact" activeStyle={{
                                 fontWeight: "bold",
                                 color: "blue"

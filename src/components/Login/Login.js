@@ -5,12 +5,13 @@ import { FormControlLabel, Checkbox, Snackbar } from '@mui/material';
 import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from '@firebase/auth';
 import useAuth from '../../hooks/useAuth';
 import swal from 'sweetalert';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 const Login = () => {
     const auth = getAuth();
     const { allFirebase } = useAuth();
     const { setUser } = allFirebase;
     const history = useHistory();
+    const location = useLocation();
     const [toggle, setoggle] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -53,17 +54,18 @@ const Login = () => {
             .then((userCredential) => {
                 updateUserName();
                 swal("Good job!", "Account has been created!", "success");
-                setoggle(true)
             })
             .catch((error) => {
                 console.log(error.message);
             });
     }
+    const redirect_uri = location.state?.from || './home';
+
     const handleProccedUser = (email, password) => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 console.log(userCredential.user);
-                history.push('/home');
+                history.push(redirect_uri);
                 swal("Good job!", "Login Successfully!", "success");
             })
             .catch((error) => {
@@ -84,7 +86,7 @@ const Login = () => {
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 setUser(result.user);
-                history.push('/home');
+                history.push(redirect_uri);
                 swal("Good job!", "Login Successfully!", "success");
             })
             .catch((error) => {
@@ -95,7 +97,7 @@ const Login = () => {
         <div className="login">
             <div className="container">
                 <div className="row form-container py-4">
-                    <div className="col-lg-4 mx-auto">
+                    <div className="col-lg-5 mx-auto">
                         <div className="form">
                             <div>
                                 <div className="text-center mb-2">
@@ -104,12 +106,12 @@ const Login = () => {
                                 </div>
                                 <form onSubmit={handleLogin}>
                                     {!toggle &&
-                                        <input onBlur={handleUserName} type="text" placeholder="Full Name" />
+                                        <input onBlur={handleUserName} type="text" placeholder="Full Name" required />
                                     }
-                                    <input onBlur={handleEmail} type="email" placeholder="Email Address" />
-                                    <input onBlur={handlePassword} type="password" placeholder="Enter Password" />
+                                    <input onBlur={handleEmail} type="email" placeholder="Email Address" required />
+                                    <input onBlur={handlePassword} type="password" placeholder="Enter Password" required />
                                     <div className="d-grid my-1">
-                                        <button className="my-btn">Login</button>
+                                        <button className="my-btn">{toggle ? "Login" : "Register"}</button>
                                     </div>
                                     <div className="flexible checkbox">
                                         <FormControlLabel

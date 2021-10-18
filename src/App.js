@@ -5,6 +5,9 @@ import Header from './components/Shared/Header/Header'
 import Contact from './components/Contact/Contact';
 import AuthProvider from './contexts/AuthProvider';
 import Login from './components/Login/Login';
+import ServiceDetails from './components/Home/serviceDetails/ServiceDetails';
+import MakeAppoinment from './components/MakeAppoinment/MakeAppoinment';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 function App() {
   return (
     <AuthProvider>
@@ -17,12 +20,18 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
+          <PrivateRoute path="/service/:id">
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
           <Route path="/contact">
             <Contact></Contact>
           </Route>
           <Route path="/login">
             <Login></Login>
           </Route>
+          <PrivateRoute path="/make-appoinment">
+            <MakeAppoinment></MakeAppoinment>
+          </PrivateRoute>
         </Switch>
       </Router>
     </AuthProvider>

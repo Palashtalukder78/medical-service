@@ -1,0 +1,29 @@
+.appoinment-form{
+    background-color: rgb(224, 224, 233) ;
+    padding: 20px;
+    border-radius: 20px;
+}
+.appoinment-form select, input{
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+}
+.appoinment-form  input{
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+}
+.appoinment-form textarea{
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.appoinment-form button{
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+}

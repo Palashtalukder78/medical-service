@@ -38,6 +38,13 @@ const Header = () => {
                                 fontWeight: "bold",
                                 color: "blue"
                             }}>Home</NavLink>
+
+                            <NavLink className="menu" to="/make-appoinment" activeStyle={{
+                                fontWeight: "bold",
+                                color: "blue"
+                            }}>
+                                Make Appoinment
+                            </NavLink>
                             <NavLink className="menu" to="/contact" activeStyle={{
                                 fontWeight: "bold",
                                 color: "blue"

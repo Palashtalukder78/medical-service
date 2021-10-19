@@ -61,7 +61,7 @@ const MakeAppoinment = () => {
                 <div className="col-md-6 py-5">
                     <div className="appoinment-form">
                         <h2 style={{ color: "darkblue" }} className=" text-center my-4">Make an Appoinment</h2>
-                        <form onSubmit={handleAppoinment}>
+                        <form onSubmit={handleAppoinment} required>
                             <select onChange={handleDepartment} id="cars">
                                 <option value="Neorology Department">Neorology Department</option>
                                 <option value="X-ray Diognostic Department">X-ray Diognostic Department</option>
@@ -69,17 +69,17 @@ const MakeAppoinment = () => {
                                 <option value="MRI Department">MRI Department</option>
                                 <option value="Labrotory Service">Labrotory Service</option>
                             </select>
-                            <select onChange={handleDoctor}>
+                            <select onChange={handleDoctor} required>
                                 <option value="Dr Pradip">Dr Pradip</option>
                                 <option value="Utpolkanti">Utpolkanti</option>
                                 <option value="hannan">Hannan</option>
                                 <option value="Shima Khatun">Shima Khatun</option>
                             </select>
-                            <input onChange={handleDate} type="date" />
-                            <input onBlur={handleName} type="text" defaultValue={user?.displayName} placeholder="Enter Your Name" />
-                            <input onBlur={handleEmail} type="email" defaultValue={user.email} placeholder="Enter your email" />
-                            <input onBlur={handlePhone} type="number" placeholder="Enter your Phone Number" />
-                            <textarea onBlur={handleMessage} className="form-control" name="" id="" cols="30" rows="4" placeholder="Enter Your messages"></textarea>
+                            <input onChange={handleDate} type="date" required />
+                            <input onBlur={handleName} type="text" defaultValue={user?.displayName} placeholder="Enter Your Name" required />
+                            <input onBlur={handleEmail} type="email" defaultValue={user.email} placeholder="Enter your email" required />
+                            <input onBlur={handlePhone} type="number" placeholder="Enter your Phone Number" required />
+                            <textarea onBlur={handleMessage} className="form-control" name="" id="" cols="30" rows="4" placeholder="Enter Your messages" required></textarea>
                             <div >
                                 <button className="my-btn">Confirm Request</button>
                             </div>
@@ -87,7 +87,7 @@ const MakeAppoinment = () => {
                     </div>
                 </div>
                 <div className="col-md-6">
-                    <div className="text-center d-block">
+                    <div className="text-center appoinment-photo">
                         <img style={{ width: "80%" }} className="img-fluid" src={appoinment} alt="AppoinmentPhoto" />
                     </div>
                 </div>

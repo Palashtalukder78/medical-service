@@ -102,7 +102,7 @@ const Login = () => {
                         <div className="form">
                             <div>
                                 <div className="text-center mb-2">
-                                    <h2 className="text-light">{toggle ? "Login" : "Register"}</h2>
+                                    <h2 className="text-primary">{toggle ? "Login" : "Register"}</h2>
                                     <img style={{ width: "80px" }} className="img-fluid" src={logo} alt="" />
                                 </div>
                                 <form onSubmit={handleLogin}>

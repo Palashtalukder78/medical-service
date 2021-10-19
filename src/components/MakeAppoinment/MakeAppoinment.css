@@ -2,6 +2,7 @@
     background-color: rgb(224, 224, 233) ;
     padding: 20px;
     border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(165, 150, 150);
 }
 .appoinment-form select, input{
     width: 90%;
@@ -10,6 +11,8 @@
     padding: 10px 15px;
     border-radius: 10px;
     border: none;
+    box-shadow: 5px 5px 5px rgb(197, 182, 182);
+
 }
 .appoinment-form  input{
     width: 90%;
@@ -21,9 +24,15 @@
     display: block;
     margin: 10px auto;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(165, 150, 150);
 }
 .appoinment-form button{
     width: 90%;
     display: block;
     margin: 10px auto;
+}
+.appoinment-photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

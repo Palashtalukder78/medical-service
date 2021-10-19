@@ -7,13 +7,13 @@
 .login input{
     width: 100%;
     border: none;
-    margin: 5px 0;
-    padding: 7px 10px;
+    margin: 10px 0;
+    padding: 10px ;
     border-radius: 10px;
     background-color: rgba(247, 246, 248, 0.74);
 }
 .form{
-    background-color: rgba(77, 221, 33, 0.699);
+    background-color: rgba(202, 212, 198, 0.699);
     padding: 25PX;
     border-radius: 25PX;
 }

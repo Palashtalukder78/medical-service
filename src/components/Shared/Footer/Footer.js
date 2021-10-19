@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+    const linkdin = "https://www.linkedin.com/in/md-ariful-islam-palash/";
+    const facebook = "https://www.facebook.com/profile.php?id=100009430642663";
+    const youtube = "https://www.youtube.com/channel/UCbP3eGSZ3j7rqJcLdk6DLrw";
     return (
         <div className="footer">
             <div className="container">
@@ -21,17 +24,17 @@ const Footer = () => {
                             fontWeight: "bold",
                             color: "blue"
                         }}><span style={{ color: "#fff" }}>Contact</span></NavLink>
-                        <NavLink className="menu" to="/login" activeStyle={{
+                        <NavLink className="menu" to="/doctors" activeStyle={{
                             fontWeight: "bold",
                             color: "blue"
-                        }}><span style={{ color: "#fff" }}>Login</span></NavLink>
+                        }}><span style={{ color: "#fff" }}>Doctors</span></NavLink>
 
                         <div className="social-icon">
-                            <a href="https://www.linkedin.com/in/md-ariful-islam-palash/" target="_blank"><i className="fab fa-linkedin"></i></a>
+                            <a href={linkdin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
 
-                            <a href="https://www.facebook.com/profile.php?id=100009430642663" target="_blank"><i className="fab fa-facebook-square"></i></a>
+                            <a href={facebook} target="_blank" rel="noreferrer"><i className="fab fa-facebook-square"></i></a>
 
-                            <a href="https://www.youtube.com/channel/UCbP3eGSZ3j7rqJcLdk6DLrw" target="_blank"><i className="fab fa-youtube-square"></i></a>
+                            <a href={youtube} target="_blank" rel="noreferrer"><i className="fab fa-youtube-square"></i></a>
                         </div>
                     </div>
                     <div className="col-md-4">

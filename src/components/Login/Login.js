@@ -38,6 +38,8 @@ const Login = () => {
     const handleUserName = (e) => {
         setUserName(e.target.value);
     }
+
+    const redirect_uri = location.state?.from || './home';
     const handleLogin = (e) => {
         e.preventDefault();
         if (password.length < 6) {
@@ -53,16 +55,15 @@ const Login = () => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                updateUserName();
-                swal("Good job!", "Account has been created!", "success");
+                console.log(userCredential.user)
                 history.push(redirect_uri);
+                swal("Good job!", "Account has been created!", "success");
+                updateUserName();
             })
-            .catch(
-                console.log("Kono Problem hosse")
-            )
+
             .finally(() => setIsLoading(false))
     }
-    const redirect_uri = location.state?.from || './home';
+
 
     const handleProccedUser = (email, password) => {
         setIsLoading(true);

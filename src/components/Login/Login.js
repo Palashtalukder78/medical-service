@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Login.css';
 import logo from '../../images/avatar.png'
 import { FormControlLabel, Checkbox, Snackbar } from '@mui/material';
-import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from '@firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut } from '@firebase/auth';
 import useAuth from '../../hooks/useAuth';
 import swal from 'sweetalert';
 import { useHistory, useLocation } from 'react-router';
@@ -55,15 +55,25 @@ const Login = () => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                console.log(userCredential.user)
-                history.push(redirect_uri);
-                swal("Good job!", "Account has been created!", "success");
                 updateUserName();
+                signout();
+                setoggle(true);
+                // history.push(redirect_uri);
+                swal("Good job!", "Account has been created!", "success");
             })
-
+            .catch(error => {
+                setError(error.message);
+                setOpen(true);
+            })
             .finally(() => setIsLoading(false))
     }
-
+    const signout = () => {
+        setIsLoading(true);
+        signOut(auth).then(() => {
+            setUser('')
+        })
+            .finally(() => setIsLoading(false))
+    }
 
     const handleProccedUser = (email, password) => {
         setIsLoading(true);
@@ -73,6 +83,10 @@ const Login = () => {
                 history.push(redirect_uri);
                 swal("Good job!", "Login Successfully!", "success");
             })
+            .catch(error => {
+                setError(error.message);
+                setOpen(true);
+            })
             .finally(() => setIsLoading(false));
     }
     const updateUserName = () => {
@@ -80,8 +94,9 @@ const Login = () => {
             displayName: userName
         }).then(() => {
 
-        }).catch((error) => {
-            console.log("Kono Genjam Ase")
+        }).catch(error => {
+            setError(error.message);
+            setOpen(true);
         });
     }
     const handleSignIn = () => {
@@ -92,6 +107,10 @@ const Login = () => {
                 setUser(result.user);
                 history.push(redirect_uri);
                 swal("Good job!", "Login Successfully!", "success");
+            })
+            .catch(error => {
+                setError(error.message);
+                setOpen(true);
             })
             .finally(() => setIsLoading(false))
     }

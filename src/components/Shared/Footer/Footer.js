@@ -41,15 +41,15 @@ const Footer = () => {
                         <h2 >Contact US</h2>
                         <div >
                             <div className="footer-address">
-                                <i class="fas fa-home"></i>
+                                <i className="fas fa-home"></i>
                                 <span>Savar, Dhaka</span>
                             </div>
                             <div className="footer-address">
-                                <i class="fa fa-envelope"></i>
+                                <i className="fa fa-envelope"></i>
                                 <span>mediService.support@gmail.com</span>
                             </div>
                             <div className="footer-address">
-                                <i class="fa fa-phone"></i>
+                                <i className="fa fa-phone"></i>
                                 <span>+880-1990524105</span>
                             </div>
                         </div>

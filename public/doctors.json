@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Dr Prodip",
+        "specialist": "Neorology",
+        "photo": "https://i.ibb.co/bzvDBM4/4.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Dr Utpolkanti",
+        "specialist": "Cardiology",
+        "photo": "https://i.ibb.co/Mhy5QB9/1.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Hannan",
+        "specialist": "Chief Medical Officer",
+        "photo": "https://i.ibb.co/M90LNH8/2.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Shima Khatun",
+        "specialist": "Anesthesiologist",
+        "photo": "https://i.ibb.co/k6RPxSM/3.jpg"
+    }
+]

@@ -3,6 +3,8 @@
     padding: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgb(165, 150, 150);
+    width: 85%;
+    margin: auto;
 }
 .appoinment-form select, input{
     width: 90%;
@@ -32,6 +34,7 @@
     margin: 10px auto;
 }
 .appoinment-photo{
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

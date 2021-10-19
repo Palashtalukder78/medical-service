@@ -55,6 +55,10 @@ const Header = () => {
                                     View Appoinment
                                 </NavLink>
                             }
+                            <NavLink className="menu" to="/doctors" activeStyle={{
+                                fontWeight: "bold",
+                                color: "blue"
+                            }}>Doctors</NavLink>
                             <NavLink className="menu" to="/contact" activeStyle={{
                                 fontWeight: "bold",
                                 color: "blue"
@@ -78,6 +82,7 @@ const Header = () => {
                                     <button onClick={handleLogout} className="btn-sm my-btn">Logout</button>
                                 </NavLink>
                             }
+
                         </Stack>
                     </Nav>
                 </Navbar.Collapse>

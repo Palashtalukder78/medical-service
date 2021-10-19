@@ -10,6 +10,8 @@ import MakeAppoinment from './components/MakeAppoinment/MakeAppoinment';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import PendingAppoinment from './components/PendingAppoinment/PendingAppoinment';
 import Footer from './components/Shared/Footer/Footer';
+import Doctors from './components/Doctors/Doctors';
+import NotFound from './components/NotFound/NotFound';
 function App() {
   return (
     <AuthProvider>
@@ -31,12 +33,18 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <PrivateRoute path="/doctors">
+            <Doctors></Doctors>
+          </PrivateRoute>
           <PrivateRoute path="/make-appoinment">
             <MakeAppoinment></MakeAppoinment>
           </PrivateRoute>
           <PrivateRoute path="/pending-appoinment">
             <PendingAppoinment></PendingAppoinment>
           </PrivateRoute>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
         <Footer />
       </Router>

@@ -1,0 +1,17 @@
+.doctors{
+    background-color: rgb(218, 227, 228);
+}
+.working-time{
+    background-color: rgb(196, 200, 212);
+}
+.worked-time{
+    display: flex;
+    justify-content: space-between;
+}
+.worked-time h5{
+    color: rgb(28, 6, 80);
+}
+.weekly-time{
+    width: 75%;
+    margin: 20px auto;
+}

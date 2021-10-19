@@ -88,7 +88,7 @@ const MakeAppoinment = () => {
                 </div>
                 <div className="col-md-6">
                     <div className="text-center appoinment-photo">
-                        <img style={{ width: "80%" }} className="img-fluid" src={appoinment} alt="AppoinmentPhoto" />
+                        <img style={{ width: "90%" }} className="img-fluid" src={appoinment} alt="AppoinmentPhoto" />
                     </div>
                 </div>
             </div>

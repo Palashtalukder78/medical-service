@@ -29,7 +29,7 @@ const Header = () => {
                 <Navbar.Brand style={{
                     display: "contents"
                 }}>
-                    <img style={{ width: "200px" }} src={logo} alt="" />
+                    <img style={{ width: "190px" }} src={logo} alt="" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

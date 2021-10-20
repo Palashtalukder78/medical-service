@@ -4,7 +4,6 @@ import HappyPatients from '../HappyPatients/HappyPatients';
 import Services from '../Services/Services';
 import WhyChooseUs from '../WhyChooseUs/WhyChooseUs';
 
-
 const Home = () => {
     return (
         <div>

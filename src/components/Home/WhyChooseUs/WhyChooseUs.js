@@ -1,13 +1,13 @@
 import React from 'react';
-import { } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import photo from '../../../images/doctors.jpg';
 import './WhyChooseUs.css'
 const WhyChooseUs = () => {
     return (
-        <>
+        <div style={{ margin: "0 !important", maxWidth: "100%", overflowX: "hidden" }} className="m-0 p-0">
             <div className="row my-5">
                 <h1 className="text-center section-title my-4">Why Choose us ?</h1>
-                <div className="col-md-6 p-0">
+                <div className="col-md-6 p-0 h-100">
                     <img className="w-100 img-fluid" src={photo} alt="" />
                 </div>
                 <div className="col-md-6 why-choose-us p-0">
@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

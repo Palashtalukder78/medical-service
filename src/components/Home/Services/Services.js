@@ -8,7 +8,7 @@ const Services = () => {
     const { allService } = useAuth();
     const { services } = allService;
     return (
-        <Container>
+        <div className="container services">
             {!services ?
                 <div style={{ height: "200px", display: "flex", alignItems: "center", justifyContent: "center" }} className="text-center">
                     <div className="spinner-border text-primary" role="status">
@@ -16,11 +16,11 @@ const Services = () => {
                     </div>
                 </div>
                 :
-                <div className="row my-4">
+                <div >
                     <div>
                         <h1 className="section-title text-center">Our Services</h1>
                     </div>
-                    <div className="row">
+                    <div className="row m-0 p-0">
                         {
                             services.map(service => <SingleService
                                 key={service?.id}
@@ -30,7 +30,7 @@ const Services = () => {
                     </div>
                 </div>
             }
-        </Container>
+        </div>
     );
 };
 

@@ -7,7 +7,7 @@ const HappyPatients = () => {
     const { happyPatients } = allHappyPatients;
     console.log(happyPatients)
     return (
-        <>
+        <div style={{ margin: "0 !important", maxWidth: "100%", overflowX: "hidden" }} className="container m-0 p-0">
             <div className="row my-5">
                 <div className="col-md-7 mx-auto">
                     <h1 className="section-title text-center">Happy Patients</h1>
@@ -25,7 +25,7 @@ const HappyPatients = () => {
                     </Carousel>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

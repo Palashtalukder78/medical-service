@@ -18,7 +18,7 @@ body{
     font-size: 18px;
 }
 .my-btn{
-    background-color: darkblue;
+    background-color: rgb(61, 61, 218);
     border: none;
     padding: 10px 15px;
     color: #fff;
@@ -27,7 +27,7 @@ body{
     transition: 0.7s;
 }
 .my-btn:hover{
-    background-color: rgb(255, 1, 1);
+    background-color: rgb(221, 99, 99);
 }
 
 @media only screen and (min-width: 669px) and (max-width: 992) {

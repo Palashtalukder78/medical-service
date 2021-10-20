@@ -56,6 +56,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className="text-light text-center copy-right">
+                <p className="m-0 py-2">Copyright &copy; 2021 || Developed by Md Ariful islam Palash</p>
+            </div>
         </div>
     );
 };

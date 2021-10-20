@@ -1,5 +1,5 @@
 .footer{
-    background-color: rgb(1, 1, 65);
+    background-color: rgb(61, 61, 218);
 }
 .social-icon a{
     font-size: 35px;
@@ -14,4 +14,7 @@
 .footer-address i{
     font-size: 20px;
     padding: 12px;
+}
+.copy-right{
+    background-color: rgb(25, 25, 121);;
 }
